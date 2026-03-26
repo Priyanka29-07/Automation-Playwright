@@ -1,0 +1,24 @@
+import{test,expect} from "@playwright/test";
+test('To automate the form',async({page})=>{
+await page.goto('https://demoqa.com/automation-practice-form');
+  await page.getByRole('textbox', { name: 'First Name' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).fill('Priyanka');
+  await page.getByRole('textbox', { name: 'Last Name' }).click();
+  await page.getByRole('textbox', { name: 'Last Name' }).fill('Das');
+  await page.getByRole('textbox', { name: 'name@example.com' }).click();
+  await page.getByRole('textbox', { name: 'name@example.com' }).fill('abc@gamil.com');
+  await page.getByRole('radio', { name: 'Female' }).check();
+  await page.getByRole('textbox', { name: 'Mobile Number' }).click();
+  await page.getByRole('textbox', { name: 'Mobile Number' }).fill('9876543210');
+  await page.getByRole('checkbox', { name: 'Reading' }).check();
+  await page.getByRole('checkbox', { name: 'Music' }).check();
+  await page.locator('#state svg').click();
+  await page.getByRole('option', { name: 'Uttar Pradesh' }).click();
+  await page.locator('#city > .css-13cymwt-control > .css-hlgwow > .css-19bb58m').click();
+  await page.getByRole('option', { name: 'Agra' }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
+  //await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanks for submitting the form');
+  // await expect(page.locator('tbody')).toContainText('Priyanka Das');
+   await expect(page.getByText('Thanks for submitting the form')).toBeVisible();
+   await expect(page.getByRole('cell',{name:'Priyanka Das'})).toBeVisible();
+});
