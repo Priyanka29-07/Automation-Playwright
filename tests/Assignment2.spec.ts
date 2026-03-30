@@ -17,8 +17,6 @@ await page.goto('https://demoqa.com/automation-practice-form');
   await page.locator('#city > .css-13cymwt-control > .css-hlgwow > .css-19bb58m').click();
   await page.getByRole('option', { name: 'Agra' }).click();
   await page.getByRole('button', { name: 'Submit' }).click();
-  //await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanks for submitting the form');
-  // await expect(page.locator('tbody')).toContainText('Priyanka Das');
    await expect(page.getByText('Thanks for submitting the form')).toBeVisible();
    await expect(page.getByRole('cell',{name:'Priyanka Das'})).toBeVisible();
 });

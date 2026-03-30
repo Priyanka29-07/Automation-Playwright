@@ -1,0 +1,27 @@
+[
+{
+  "url":"https://demoqa.com/",
+  "firstName": "Priyanka",
+  "lastName": "Das",
+  "email": "abc@gmail.com",
+  "mobile": "9876543210",
+  "gender": "Female",
+  "hobbies": ["Reading", "Music"],
+  "state": "Uttar Pradesh",
+  "city": "Agra"
+},
+
+{
+  "url":"https://demoqa.com/",
+  "firstName": "Priyanshi",
+  "lastName": "Das",
+  "email": "ex@gmail.com",
+  "mobile": "1234567889",
+  "gender": "Female",
+  "hobbies": ["Sports"],
+  "state": "Haryana",
+  "city": "Karnal"
+}
+
+
+]
