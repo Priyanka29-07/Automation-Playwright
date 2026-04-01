@@ -1,11 +1,11 @@
 import { Page, expect,Locator } from "@playwright/test";
+
 //import dataset from "../test-data/datatest.json";
 export class FormPage {
     readonly page: Page;
     readonly successMessage: Locator;
     constructor(page:Page){
         this.page=page;
-        
 this.successMessage = page.getByText(
       'Thanks for submitting the form'
     );

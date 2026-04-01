@@ -1,17 +1,15 @@
 import{test,expect} from "@playwright/test";
 test('To automate the form',async({page})=>{
 await page.goto('https://demoqa.com/automation-practice-form');
-  await page.getByRole('textbox', { name: 'First Name' }).click();
   await page.getByRole('textbox', { name: 'First Name' }).fill('Priyanka');
-  await page.getByRole('textbox', { name: 'Last Name' }).click();
   await page.getByRole('textbox', { name: 'Last Name' }).fill('Das');
-  await page.getByRole('textbox', { name: 'name@example.com' }).click();
   await page.getByRole('textbox', { name: 'name@example.com' }).fill('abc@gamil.com');
   await page.getByRole('radio', { name: 'Female' }).check();
-  await page.getByRole('textbox', { name: 'Mobile Number' }).click();
   await page.getByRole('textbox', { name: 'Mobile Number' }).fill('9876543210');
   await page.getByRole('checkbox', { name: 'Reading' }).check();
   await page.getByRole('checkbox', { name: 'Music' }).check();
+  await page.getByRole('button', { name: 'Choose File' }).click();
+  await page.getByRole('button', { name: 'Choose File' }).setInputFiles('tests/files/CertificateOfCompletion_Learning Playwright.pdf');
   await page.locator('#state svg').click();
   await page.getByRole('option', { name: 'Uttar Pradesh' }).click();
   await page.locator('#city > .css-13cymwt-control > .css-hlgwow > .css-19bb58m').click();
